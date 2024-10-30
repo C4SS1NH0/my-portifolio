@@ -6,6 +6,11 @@ const poppins = localFont({
   src: [
     {
       path: "./fonts/Poppins-Regular.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Poppins-Regular.ttf",
       weight: "400",
       style: "normal",
     },
