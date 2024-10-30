@@ -2,15 +2,30 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const poppins = localFont({
+  src: [
+    {
+      path: "./fonts/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Poppins-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Poppins-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--poppins",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${poppins.variable}`}>
         {children}
       </body>
     </html>

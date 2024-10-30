@@ -1,14 +1,27 @@
 :root {
- 
+ --text-primary: white;
+ --text-secundary: #b3b3b3;
+ --bg-primary: #2c2c2c;
+
 }
 
 *{
-
+box-sizing: border-box;
+padding: 0;
+margin: 0;
 }
 
 
 html,body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--poppins), sans-serif;
   
+  
+}
+
+body {
+    background-color: var(--bg-primary);
 }
 
 
